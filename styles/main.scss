@@ -4,14 +4,19 @@ $blue: hsl(248, 32%, 49%);
 $dark-blue: hsl(249, 10%, 26%);
 $grayish-blue: hsl(246, 25%, 77%);
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap");
-body {
+* {
+    box-sizing: border-box;
     padding: 0;
+    margin: 0;
+}
+
+body {
     font-size: 16px;
     min-height: 100%;
     font-family: "Poppins", sans-serif;
     background-color: $primary-red;
     background-image: url("../images//bg-intro-desktop.png");
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -22,17 +27,26 @@ body {
     .text-section {
         color: #fff;
         margin-top: 170px;
+        h1 {
+            font-weight: 900;
+        }
     }
     .form-section {
-        margin-top: 60px;
+        width: 85%;
+        margin: 70px auto 0 auto;
         .blue-btn {
             background-color: $blue;
             outline: none;
             border: none;
-            padding: 10px;
+            padding: 15px;
             color: #fff;
             border-radius: 10px;
             width: 100%;
+            box-shadow: 0px 6px 0 rgba(0, 0, 0, 0.15);
+        }
+        .blue-btn:hover {
+            opacity: 0.9;
+            cursor: pointer;
         }
         form {
             width: 100%;
@@ -45,14 +59,33 @@ body {
                 display: block;
                 width: 85%;
                 padding: 10px;
-                margin: 0 auto 10px auto;
+                margin: 0 auto 15px auto;
+                border: 2px solid #f1f1f1;
+                border-radius: 3px;
             }
             .submit-btn {
                 background-color: $primary-green;
                 border: none;
                 color: #fff;
-                padding: 100px;
-                border-radius: 10px;
+                padding: 15px;
+                text-transform: uppercase;
+                font-weight: bold;
+                box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+            }
+            .submit-btn:hover {
+                opacity: 0.8;
+                cursor: pointer;
+            }
+            .terms {
+                font-size: 8px;
+                color: gray;
+                a {
+                    color: $primary-red;
+                    font-weight: bolder;
+                }
+                a:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
